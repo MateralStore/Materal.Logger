@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="../../Common.props" />
+	<PropertyGroup>
+		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+		<IsTestProject>true</IsTestProject>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="coverlet.collector">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" />
+		<PackageReference Include="MSTest.TestAdapter" />
+		<PackageReference Include="MSTest.TestFramework" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Materal.Test.Base\Materal.Test.Base\Materal.Test.Base.csproj" />
+	  <ProjectReference Include="..\Materal.Logger.Abstractions\Materal.Logger.Abstractions.csproj" />
+	  <ProjectReference Include="..\Materal.Logger.LoggerTrace\Materal.Logger.LoggerTrace.csproj" />
+	  <ProjectReference Include="..\Materal.Logger.MongoLogger\Materal.Logger.MongoLogger.csproj" />
+	  <ProjectReference Include="..\Materal.Logger.MySqlLogger\Materal.Logger.MySqlLogger.csproj" />
+	  <ProjectReference Include="..\Materal.Logger.OracleLogger\Materal.Logger.OracleLogger.csproj" />
+	  <ProjectReference Include="..\Materal.Logger.SqliteLogger\Materal.Logger.SqliteLogger.csproj" />
+	  <ProjectReference Include="..\Materal.Logger.SqlServerLogger\Materal.Logger.SqlServerLogger.csproj" />
+	  <ProjectReference Include="..\Materal.Logger.WebSocketLogger\Materal.Logger.WebSocketLogger.csproj" />
+	  <ProjectReference Include="..\Materal.Logger\Materal.Logger.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="MateralLogger.json">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+</Project>
