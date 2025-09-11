@@ -107,20 +107,35 @@ namespace Materal.Logger.Abstractions
         /// <param name="text"></param>
         /// <param name="data"></param>
         /// <returns></returns>
-        private static string ApplyText(string text, Dictionary<string, object?> data)
+        public static string ApplyText(string text, Dictionary<string, object?> data)
         {
-            if (data.Count <= 0) return text;
-            string result = text;
 #if NET
             Regex regex = ExpressionRegex();
 #else
             Regex regex = new(@"\$\{[^\}]+\}");
 #endif
+            return ApplyText(text, regex, 2, data);
+        }
+        /// <summary>
+        /// 应用文本
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="regex"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public static string ApplyText(string text, Regex regex, int startIndex, Dictionary<string, object?> data)
+        {
+            if (data.Count <= 0) return text;
+            string result = text;
             MatchCollection matchCollection = regex.Matches(result);
             foreach (object? matchItem in matchCollection)
             {
                 if (matchItem is not Match match) continue;
-                string valueName = match.Value[2..^1];
+                string valueExpression = match.Value[startIndex..^1];
+                string[] valueExpressions = valueExpression.Split(':');
+                string valueName = valueExpressions[0];
+                string valueFormat = valueExpressions.Length > 1 ? valueExpressions[1] : string.Empty;
                 object? value = data.GetObjectValue(valueName);
                 string stringValue = string.Empty;
                 if (value is string str)
@@ -129,13 +144,18 @@ namespace Materal.Logger.Abstractions
                 }
                 else if (value is not null)
                 {
-                    if (!value.GetType().IsClass)
+                    try
                     {
-                        stringValue = value.ToString() ?? string.Empty;
+                        stringValue = valueFormat switch
+                        {
+                            "json" => value.ToJson(),
+                            "none" => string.Empty,
+                            _ => value.ToString() ?? string.Empty,
+                        };
                     }
-                    else
+                    catch
                     {
-                        stringValue = value.ToJson();
+                        stringValue = $"!{{{valueName}-格式化失败}}";
                     }
                 }
                 result = result.Replace(match.Value, stringValue);
