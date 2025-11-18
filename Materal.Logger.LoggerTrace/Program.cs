@@ -53,12 +53,12 @@ namespace Materal.Logger.LoggerTrace
             if (targets is not null && !string.IsNullOrWhiteSpace(targets))
             {
                 string[] targetLevels = targets.Split(',');
-                targetLogLevels.AddRange(targetLevels.Select(m => (LogLevel)Enum.Parse(typeof(LogLevel), m)));
+                targetLogLevels.AddRange(targetLevels.Select(Enum.Parse<LogLevel>));
             }
             if (ignores is not null && !string.IsNullOrWhiteSpace(ignores))
             {
                 string[] ignoreLevels = ignores.Split(',');
-                ignoreLogLevels.AddRange(ignoreLevels.Select(m => (LogLevel)Enum.Parse(typeof(LogLevel), m)));
+                ignoreLogLevels.AddRange(ignoreLevels.Select(Enum.Parse<LogLevel>));
             }
             _webSocket = new();
             _webSocket.Options.KeepAliveInterval = TimeSpan.FromHours(1);
