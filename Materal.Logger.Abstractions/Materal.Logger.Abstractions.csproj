@@ -6,6 +6,9 @@
 		<Description>包含日志抽象内容</Description>
 	</PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" />
+	</ItemGroup>
+	<ItemGroup>
 	  <ProjectReference Include="..\..\Materal.Utils\Materal.Utils\Materal.Utils.csproj" />
 	</ItemGroup>
 </Project>
