@@ -1,5 +1,5 @@
 ﻿using Materal.Logger.BatchLogger;
-using Materal.Utils.Http;
+using Materal.Utils.Network.Http;
 
 namespace Materal.Logger.HttpLogger
 {

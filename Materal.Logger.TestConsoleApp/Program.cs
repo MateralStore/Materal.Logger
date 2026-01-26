@@ -2,7 +2,6 @@
 using Materal.Logger.ConsoleLogger;
 using Materal.Logger.Extensions;
 using Materal.Logger.MongoLogger;
-using Materal.Utils.Extensions;
 using Materal.Utils.MongoDB.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -16,7 +15,6 @@ namespace Materal.Logger.TestConsoleApp
         public static void Main()
         {
             IServiceCollection services = new ServiceCollection();
-            services.AddMateralUtils();
             services.AddMongoUtils();
             services.AddMateralLogger(option =>
             {

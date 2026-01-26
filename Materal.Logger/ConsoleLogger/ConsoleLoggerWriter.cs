@@ -1,4 +1,6 @@
-﻿namespace Materal.Logger.ConsoleLogger
+﻿using Materal.Utils.Consoles;
+
+namespace Materal.Logger.ConsoleLogger
 {
     /// <summary>
     /// 控制台日志写入器

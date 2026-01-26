@@ -16,6 +16,7 @@
 	  <PackageReference Include="System.CommandLine" />
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\..\Materal.Utils\Materal.Utils.Consoles\Materal.Utils.Consoles.csproj" />
 		<ProjectReference Include="..\..\Materal.Utils\Materal.Utils\Materal.Utils.csproj" />
 	</ItemGroup>
 </Project>

@@ -1,4 +1,6 @@
-﻿namespace Materal.Logger
+﻿using Materal.Utils.Consoles;
+
+namespace Materal.Logger
 {
     /// <summary>
     /// 默认日志信息

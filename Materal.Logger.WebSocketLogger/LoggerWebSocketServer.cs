@@ -1,5 +1,5 @@
 ﻿using Fleck;
-using Materal.Extensions;
+using Materal.Utils.Extensions;
 
 namespace Materal.Logger.WebSocketLogger
 {

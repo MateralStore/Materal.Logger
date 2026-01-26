@@ -1,7 +1,6 @@
 ﻿global using Materal.Abstractions;
-global using Materal.Extensions;
 global using Materal.Logger.Abstractions;
-global using Materal.Utils;
+global using Materal.Utils.Extensions;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.DependencyInjection.Extensions;

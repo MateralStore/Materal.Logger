@@ -1,6 +1,6 @@
 ﻿using Materal.Logger.Abstractions;
 using Materal.Logger.Abstractions.Extensions;
-using Materal.Utils;
+using Materal.Utils.Consoles;
 
 namespace Materal.Logger.Test
 {

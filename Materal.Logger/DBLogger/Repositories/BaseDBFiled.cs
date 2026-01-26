@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Materal.Utils.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace Materal.Logger.DBLogger.Repositories
 {
@@ -55,7 +56,7 @@ namespace Materal.Logger.DBLogger.Repositories
         {
             object resultObj = GetType().Instantiation();
             if (resultObj is not IDBFiled result) throw new LoggerException("实例化数据库字段失败");
-            this.CopyProperties(result);
+            CloneHelper.CopyProperties(this, result);
             if (Value is not null && !string.IsNullOrWhiteSpace(Value))
             {
                 result.Value = log.ApplyText(Value, options);

@@ -10,6 +10,8 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Configuration" />
 	</ItemGroup>
 	<ItemGroup>
+		<ProjectReference Include="..\..\Materal.Utils\Materal.Utils.Consoles\Materal.Utils.Consoles.csproj" />
+		<ProjectReference Include="..\..\Materal.Utils\Materal.Utils.Network\Materal.Utils.Network.csproj" />
 		<ProjectReference Include="..\Materal.Logger.Abstractions\Materal.Logger.Abstractions.csproj" />
 	</ItemGroup>
 </Project>

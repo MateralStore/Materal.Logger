@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using Materal.Utils.Helpers;
+using System.Data;
 
 namespace Materal.Logger.DBLogger.Repositories
 {
@@ -36,9 +37,9 @@ namespace Materal.Logger.DBLogger.Repositories
                 {
                     Type? targetType = dt.Columns[filed.Name]?.DataType;
                     if (targetType == null) continue;
-                    if (filed.Value.CanConvertTo(targetType))
+                    if (ConvertHelper.CanConvertTo(targetType))
                     {
-                        dr[filed.Name] = filed.Value.ConvertTo(targetType);
+                        dr[filed.Name] = ConvertHelper.ConvertTo(filed.Value, targetType);
                     }
                     else
                     {

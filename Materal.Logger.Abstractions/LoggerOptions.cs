@@ -86,14 +86,14 @@ namespace Materal.Logger.Abstractions
             try
             {
                 _semaphore.Wait();
-                DefaultLogLevel = Configuration.Get<Dictionary<string, LogLevel>>("Logging:MateralLogger:LogLevel");
+                DefaultLogLevel = Configuration.GetConfigItem<Dictionary<string, LogLevel>>("Logging:MateralLogger:LogLevel");
                 Rules = [.. Rules.Distinct((m, n) => m.Name == n.Name)];
                 List<LoggerTargetOptions> configFileTargets = [.. Targets.Where(m => !CodeConfigTargetNames.Contains(m.Name))];
                 foreach (LoggerTargetOptions configFileTarget in configFileTargets)
                 {
                     Targets.Remove(configFileTarget);
                 }
-                string? targetConfigs = Configuration.Get<string>("Logging:MateralLogger:Targets");
+                string? targetConfigs = Configuration.GetConfigItem<string>("Logging:MateralLogger:Targets");
                 if (targetConfigs is null || string.IsNullOrWhiteSpace(targetConfigs)) return;
                 List<ExpandoObject> targets = JsonConvert.DeserializeObject<List<ExpandoObject>>(targetConfigs) ?? [];
                 foreach (ExpandoObject target in targets)

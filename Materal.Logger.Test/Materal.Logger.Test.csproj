@@ -14,7 +14,6 @@
 		<PackageReference Include="MSTest.TestFramework" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\..\Materal.Test.Base\Materal.Test.Base\Materal.Test.Base.csproj" />
 	  <ProjectReference Include="..\Materal.Logger.Abstractions\Materal.Logger.Abstractions.csproj" />
 	  <ProjectReference Include="..\Materal.Logger.LoggerTrace\Materal.Logger.LoggerTrace.csproj" />
 	  <ProjectReference Include="..\Materal.Logger.MongoLogger\Materal.Logger.MongoLogger.csproj" />
