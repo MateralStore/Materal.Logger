@@ -1,4 +1,4 @@
-﻿using Materal.Utils.Network;
+using Materal.Utils.Network;
 
 namespace Materal.Logger.Extensions;
 

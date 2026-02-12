@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-// ÆôÓÃ²âÊÔ²¢ÐÐ»¯ÒÔÌá¸ß²âÊÔÖ´ÐÐÐÔÄÜ
-// Workers = 0 ±íÊ¾Ê¹ÓÃËùÓÐ¿ÉÓÃµÄ´¦ÀíÆ÷ºËÐÄ
-// Scope = MethodLevel ±íÊ¾ÔÚ·½·¨¼¶±ð²¢ÐÐÖ´ÐÐ²âÊÔ
+// ï¿½ï¿½ï¿½Ã²ï¿½ï¿½Ô²ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ß²ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// Workers = 0 ï¿½ï¿½Ê¾Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ÃµÄ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// Scope = MethodLevel ï¿½ï¿½Ê¾ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½Ð²ï¿½ï¿½ï¿½
 [assembly: Parallelize(Workers = 0, Scope = ExecutionScope.MethodLevel)]

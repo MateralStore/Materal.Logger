@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger
+namespace Materal.Logger
 {
     /// <summary>
     /// 日志提供者

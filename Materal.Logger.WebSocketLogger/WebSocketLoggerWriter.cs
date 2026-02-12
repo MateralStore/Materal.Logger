@@ -1,4 +1,4 @@
-﻿using Fleck;
+using Fleck;
 using System.Collections.Concurrent;
 
 namespace Materal.Logger.WebSocketLogger

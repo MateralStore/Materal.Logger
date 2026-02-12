@@ -1,4 +1,4 @@
-﻿using Materal.Utils.Consoles;
+using Materal.Utils.Consoles;
 using Materal.Utils.Extensions;
 using System.CommandLine;
 using System.Net.WebSockets;

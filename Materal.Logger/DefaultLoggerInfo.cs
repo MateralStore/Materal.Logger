@@ -1,4 +1,4 @@
-﻿using Materal.Utils.Consoles;
+using Materal.Utils.Consoles;
 
 namespace Materal.Logger
 {

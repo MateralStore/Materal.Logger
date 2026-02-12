@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.OracleLogger
+namespace Materal.Logger.OracleLogger
 {
     /// <summary>
     /// LoggerOptions扩展

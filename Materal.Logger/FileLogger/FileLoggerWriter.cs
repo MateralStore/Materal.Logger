@@ -1,4 +1,4 @@
-﻿using Materal.Logger.BatchLogger;
+using Materal.Logger.BatchLogger;
 
 namespace Materal.Logger.FileLogger
 {

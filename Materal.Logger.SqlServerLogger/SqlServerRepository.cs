@@ -1,4 +1,4 @@
-﻿using Materal.Logger.DBLogger.Repositories;
+using Materal.Logger.DBLogger.Repositories;
 using Microsoft.Data.SqlClient;
 using System.Data;
 

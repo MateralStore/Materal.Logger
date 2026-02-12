@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.SqlServerLogger
+namespace Materal.Logger.SqlServerLogger
 {
     /// <summary>
     /// LoggerOptions扩展

@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.DBLogger.Repositories
+namespace Materal.Logger.DBLogger.Repositories
 {
     /// <summary>
     /// 数据库字段

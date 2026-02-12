@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.BatchLogger
+namespace Materal.Logger.BatchLogger
 {
     /// <summary>
     /// 批量日志模型

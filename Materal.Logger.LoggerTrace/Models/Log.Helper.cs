@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.Abstractions
+namespace Materal.Logger.Abstractions
 {
     public partial class Log
     {

@@ -1,4 +1,4 @@
-﻿#if NET
+#if NET
 using Microsoft.Extensions.Hosting;
 
 namespace Materal.Logger.Extensions

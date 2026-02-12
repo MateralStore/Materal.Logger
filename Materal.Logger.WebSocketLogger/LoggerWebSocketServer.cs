@@ -1,4 +1,4 @@
-﻿using Fleck;
+using Fleck;
 using Materal.Utils.Extensions;
 
 namespace Materal.Logger.WebSocketLogger

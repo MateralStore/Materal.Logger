@@ -1,4 +1,4 @@
-﻿using Materal.Logger.DBLogger;
+using Materal.Logger.DBLogger;
 
 namespace Materal.Logger.MySqlLogger
 {

@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.Extensions
+namespace Materal.Logger.Extensions
 {
     /// <summary>
     /// 日志扩展

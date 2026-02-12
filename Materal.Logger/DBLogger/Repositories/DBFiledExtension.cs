@@ -1,4 +1,4 @@
-﻿using Materal.Utils.Helpers;
+using Materal.Utils.Helpers;
 using System.Data;
 
 namespace Materal.Logger.DBLogger.Repositories

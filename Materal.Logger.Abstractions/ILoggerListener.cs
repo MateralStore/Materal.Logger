@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.Abstractions
+namespace Materal.Logger.Abstractions
 {
     /// <summary>
     /// 日志监听器

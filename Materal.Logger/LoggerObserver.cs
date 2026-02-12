@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger
+namespace Materal.Logger
 {
     internal class LoggerObserver(ILoggerObserver loggerObserver) : IObserver<KeyValuePair<string, object?>>
     {

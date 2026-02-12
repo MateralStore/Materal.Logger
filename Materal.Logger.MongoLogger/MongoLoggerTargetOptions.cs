@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.MongoLogger
+namespace Materal.Logger.MongoLogger
 {
     /// <summary>
     /// MongoLogger目标配置

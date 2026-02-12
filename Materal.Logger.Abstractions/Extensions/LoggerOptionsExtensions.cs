@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.Abstractions.Extensions
+namespace Materal.Logger.Abstractions.Extensions
 {
     /// <summary>
     /// LoggerOptions扩展

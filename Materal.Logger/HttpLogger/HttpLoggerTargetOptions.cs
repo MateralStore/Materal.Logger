@@ -1,4 +1,4 @@
-﻿using HttpMethodEnum = System.Net.Http.HttpMethod;
+using HttpMethodEnum = System.Net.Http.HttpMethod;
 
 namespace Materal.Logger.HttpLogger
 {

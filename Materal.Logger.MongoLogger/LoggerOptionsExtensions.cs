@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.MongoLogger
+namespace Materal.Logger.MongoLogger
 {
     /// <summary>
     /// LoggerOptions扩展

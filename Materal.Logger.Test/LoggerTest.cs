@@ -1,4 +1,4 @@
-﻿using Materal.Logger.Abstractions;
+using Materal.Logger.Abstractions;
 using Materal.Logger.Abstractions.Extensions;
 using Materal.Utils.Consoles;
 

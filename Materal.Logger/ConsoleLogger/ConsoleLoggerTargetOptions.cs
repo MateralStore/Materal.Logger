@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.ConsoleLogger
+namespace Materal.Logger.ConsoleLogger
 {
     /// <summary>
     /// 控制台日志目标配置

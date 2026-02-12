@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.MySqlLogger
+namespace Materal.Logger.MySqlLogger
 {
     /// <summary>
     /// LoggerOptions扩展

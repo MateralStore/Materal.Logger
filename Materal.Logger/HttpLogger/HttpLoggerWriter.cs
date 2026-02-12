@@ -1,4 +1,4 @@
-﻿using Materal.Logger.BatchLogger;
+using Materal.Logger.BatchLogger;
 using Materal.Utils.Network.Http;
 
 namespace Materal.Logger.HttpLogger

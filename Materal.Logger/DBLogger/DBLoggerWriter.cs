@@ -1,4 +1,4 @@
-﻿using Materal.Logger.BatchLogger;
+using Materal.Logger.BatchLogger;
 using Materal.Logger.DBLogger.Repositories;
 
 namespace Materal.Logger.DBLogger

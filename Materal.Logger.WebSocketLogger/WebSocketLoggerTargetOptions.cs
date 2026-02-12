@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.WebSocketLogger
+namespace Materal.Logger.WebSocketLogger
 {
     /// <summary>
     /// WebSocket目标配置

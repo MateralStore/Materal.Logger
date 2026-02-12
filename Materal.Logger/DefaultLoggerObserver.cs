@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger
+namespace Materal.Logger
 {
     /// <summary>
     /// 默认日志监听器

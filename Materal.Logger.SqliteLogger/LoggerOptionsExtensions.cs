@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.SqliteLogger
+namespace Materal.Logger.SqliteLogger
 {
     /// <summary>
     /// LoggerOptions扩展

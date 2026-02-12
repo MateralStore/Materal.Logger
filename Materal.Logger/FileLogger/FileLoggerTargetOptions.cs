@@ -1,4 +1,4 @@
-﻿namespace Materal.Logger.FileLogger
+namespace Materal.Logger.FileLogger
 {
     /// <summary>
     /// 文件日志器配置
