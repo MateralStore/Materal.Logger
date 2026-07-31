@@ -20,22 +20,21 @@ namespace Materal.Logger.LoggerTrace
         public static async Task<int> Main(string[] args)
         {
             AppDomain.CurrentDomain.ProcessExit += CurrentDomain_ProcessExit;
-            Option<string> urlOption = new("--Url", "指定服务地址");
-            urlOption.AddAlias("-u");
-            urlOption.IsRequired = true;
-            urlOption.SetDefaultValue("127.0.0.1:5002");
-            Option<string> targetOption = new("--Target", "指定目标日志等级[Trace,Debug,Information,Warning,Error,Critical]");
-            targetOption.AddAlias("-t");
-            targetOption.IsRequired = false;
-            Option<string> ignoreOption = new("--Ignore", "指定忽略日志等级[Trace,Debug,Information,Warning,Error,Critical]");
-            ignoreOption.AddAlias("-i");
-            ignoreOption.IsRequired = false;
+            Option<string> urlOption = new("--Url") { Description = "指定服务地址", Required = true, DefaultValueFactory = _ => "127.0.0.1:5002" };
+            urlOption.Aliases.Add("-u");
+            Option<string?> targetOption = new("--Target") { Description = "指定目标日志等级[Trace,Debug,Information,Warning,Error,Critical]" };
+            targetOption.Aliases.Add("-t");
+            Option<string?> ignoreOption = new("--Ignore") { Description = "指定忽略日志等级[Trace,Debug,Information,Warning,Error,Critical]" };
+            ignoreOption.Aliases.Add("-i");
             RootCommand rootCommand = new("MateralLogger远程追踪器");
-            rootCommand.AddOption(urlOption);
-            rootCommand.AddOption(targetOption);
-            rootCommand.AddOption(ignoreOption);
-            rootCommand.SetHandler(ExcuteListenerAsync, urlOption, targetOption, ignoreOption);
-            return await rootCommand.InvokeAsync(args);
+            rootCommand.Options.Add(urlOption);
+            rootCommand.Options.Add(targetOption);
+            rootCommand.Options.Add(ignoreOption);
+            rootCommand.SetAction(parseResult => ExcuteListenerAsync(
+                parseResult.GetValue(urlOption) ?? "127.0.0.1:5002",
+                parseResult.GetValue(targetOption),
+                parseResult.GetValue(ignoreOption)));
+            return await rootCommand.Parse(args).InvokeAsync();
         }
 
         /// <summary>
